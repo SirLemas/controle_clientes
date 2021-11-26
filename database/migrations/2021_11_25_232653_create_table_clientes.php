@@ -15,10 +15,10 @@ class CreateTableClientes extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 500);
-            $table->string('telefone', 30);
-            $table->string('cpf', 20)->nullable();
-            $table->string('placa_carro', 10);
+            $table->string('nome', 500)->nullable();
+            $table->string('telefone', 30)->nullable();
+            $table->string('cpf', 20)->nullable()->unique();
+            $table->string('placa_carro', 10)->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateTableClientes extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_clientes');
+        Schema::dropIfExists('clientes');
     }
 }
