@@ -7,3 +7,5 @@
 </ol>
 
 <strong>OBS: Se quando subir a aplicação, der erro de conexão, parar o container e subir novamente que ele rodará tranquilamente.</strong>
+
+<strong>A Collection para teste no Postman está no path ./colletion</strong>
